@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demon Slayer: Kimetsu no Yaiba</title>
+    <style>
+        /* CSS Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #050505;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #800000;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff4d4d;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff4d4d;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(18, 18, 18, 1)), 
+                        url('https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=1200') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: #ff4d4d;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            color: #dddddd;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #ff4d4d;
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Characters Grid */
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #333;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(255, 77, 77, 0.3);
+        }
+
+        .card-content {
+            padding: 1.2rem;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .card-subtitle {
+            font-size: 0.9rem;
+            color: #ff4d4d;
+            margin-bottom: 0.8rem;
+            font-weight: bold;
+        }
+
+        .card-desc {
+            font-size: 0.85rem;
+            color: #aaa;
+        }
+
+        /* Project & Contact Info Cards */
+        .info-box {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-left: 4px solid #ff4d4d;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .contact-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-list a {
+            color: #ff4d4d;
+            text-decoration: none;
+        }
+
+        .contact-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #050505;
+            color: #666;
+            margin-top: 3rem;
+            border-top: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="logo">Demon Slayer</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about-story">Story</a>
+            <a href="#characters">Characters</a>
+            <a href="#about-project">About Project</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Destroy All Demons</h1>
+        <p>Follow Tanjiro Kamado on his journey to turn his sister back into a human and avenge his family.</p>
+    </section>
+
+    <!-- Anime Story Section -->
+    <div class="container" id="about-story">
+        <h2 class="section-title">The Story</h2>
+        <blockquote style="background: #1e1e1e; padding: 1.5rem; border-left: 4px solid #ff4d4d;">
+            Since ancient times, rumors have persisted of man-eating demons lurking in the woods. Because of this, the local townsfolk never venture outside at night. Legend has it that a Demon Slayer also roams the night, hunting down these bloodthirsty demons.
+        </blockquote>
+    </div>
+
+    <!-- Characters Section -->
+    <div class="container" id="characters">
+        <h2 class="section-title">Main Characters</h2>
+        <div class="character-grid">
+            
+            <div class="card">
+                <div class="card-content">
+                    <h3 class="card-title">Tanjiro Kamado</h3>
+                    <p class="card-subtitle">Water & Sun Breathing</p>
+                    <p class="card-desc">A kind-hearted boy with an acute sense of smell, determined to find a cure for Nezuko.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3 class="card-title">Nezuko Kamado</h3>
+                    <p class="card-subtitle">Blood Demon Art</p>
+                    <p class="card-desc">Tanjiro's younger sister who was turned into a demon, yet retains her human emotions.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3 class="card-title">Zenitsu Agatsuma</h3>
+                    <p class="card-subtitle">Thunder Breathing</p>
+                    <p class="card-desc">A cowardly slayer who reveals his true, lightning-fast potential when he falls asleep.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3 class="card-title">Inosuke Hashibira</h3>
+                    <p class="card-subtitle">Beast Breathing</p>
+                    <p class="card-desc">A wild boy raised by boars who uses custom dual blades and relies on raw instinct.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- About Project Section -->
+    <div class="container" id="about-project">
+        <h2 class="section-title">About The Project</h2>
+        <div class="info-box">
+            <p><strong>Project Overview:</strong> This web site is a practice fan page dedicated to the anime series <em>Demon Slayer: Kimetsu no Yaiba</em>.</p>
+            <br>
+            <p><strong>Objective:</strong> Built as part of the Front-End Web Development program at <strong>FEI Institute</strong>, this project demonstrates foundational web skills including semantic HTML structure, CSS Flexbox/Grid layouts, custom dark theme styling, and responsive design.</p>
+        </div>
+    </div>
+
+    <!-- Contacts / Developer Profile Section -->
+    <div class="container" id="contact">
+        <h2 class="section-title">Developer & Contact</h2>
+        <div class="info-box">
+            <h3>Nolan Sheppard</h3>
+            <p style="color: #ff4d4d; font-weight: bold; margin-bottom: 0.5rem;">Student Developer — FEI Institute</p>
+            <p>Currently studying modern front-end web development techniques, crafting responsive web layouts, and building interactive web experiences.</p>
+            
+            <ul class="contact-list">
+                <li><strong>Institution:</strong> FEI Institute</li>
+                <li><strong>Role:</strong> Front-End Coding Student</li>
+                <li><strong>Email:</strong> <a href="mailto:nolwash.255@gmail.com">nolan.sheppard@example.com</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com" target="_blank">github.com/nolansheppard</a></li>
+                <li><strong>LinkedIn:</strong> <a href="https://linkedin.com" target="_blank">linkedin.com/in/nolansheppard</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Built by Nolan Sheppard | FEI Institute Front-End Web Development Project</p>
+    </footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <section id="landing">
+        <nav>
+            <div class="row nav__row">
+                <div class="nav__logo">
+                <!--  -->Nav Logo here<!--  -->
+                </div>
+                <!--  -->Enter Nav Links here<!--  -->
+                <button class="btn__menu" onclick="openMenu()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="btn__menu--svg">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div class="modal">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="light___StyledCloseIcon-lj69nl-14 fASujC">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal__links">
+                <a class="modal__link">About</a>
+                <a class="modal__link">Blog</a>
+                <a class="modal__link">Pricing</a>
+                <a class="modal__link">Contact Us</a>
+                <a class="modal__link">Login</a>
+                <a class="modal__link modal__link--primary">Sign Up</a>
+            </div>
+        </div>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <!--  -->Enter Header / About Us Section<!--  -->
+            </div>
+        </header>
+    </section>
+    <main>
+        <section id="features">
+            <div class="container">
+                <div class="row__narrow">
+                    <!--  -->Enter Features Section<!--  -->
+                </div>
+            </div>
+        </section>
+        <section id="quality">
+            <div class="container">
+                <div class="row">
+                    <!--  -->Enter Quality Work Section<!--  -->
+                </div>
+            </div>
+        </section>
+        <section id="steps">
+            <div class="container">
+                <div class="row">
+                    <!--  -->Enter Steps Section<!--  -->
+                </div>
+            </div>
+        </section>
+        <section id="values">
+            <div class="container">
+                <div class="row">
+                    <!--  -->Enter Values Section<!--  -->
+                </div>
+            </div>
+        </section>
+        <section id="pricing">
+            <div class="container">
+                <div class="row">
+                    <!--  -->Enter Pricing Section<!--  -->
+                </div>
+            </div>
+        </section>
+        <section id="testimonials">
+            <div class="container">
+                <div class="row">
+                    <!--  -->Enter Testimonials Section<!--  -->
+                </div>
+            </div>
+        </section>
+        <section id="start">
+            <div class="container">
+                <div class="row">
+                    <!--  -->Enter "Start"/Call to action section<!--  -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="row footer__row">
+            <!--  -->Enter Footer<!--  -->
+        </div>
+    </footer>
+</body>
+
+</html>
